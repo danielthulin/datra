@@ -18,7 +18,7 @@ def print_json(j, prefix=''):
             print('%s%s:%s' % (prefix, key, value))
 
 USERNAME = 'danielthulin'
-PASSWORD = '10293'
+PASSWORD = ''
 SERVICE = 'NEXTAPI'
 URL = 'api.test.nordnet.se'
 API_VERSION = '2'
@@ -154,7 +154,7 @@ def main():
     print('Get instrument lists')
     print('------------------------------------------------------------------------')
 
-    # GET Lists 
+    # GET Lists
     ins_li_conn = http.client.HTTPSConnection(URL)
 
     b64_auth = base64.b64encode(bytes(session_key, encoding='utf-8')).decode("utf-8")
